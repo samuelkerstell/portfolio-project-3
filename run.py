@@ -3,6 +3,11 @@ import random
 
 
 def goalCheck(computerChoice, userChoice, score):
+    """
+    Checks the user input against the randomized computer choice
+    If they are equal the penalty kick was saved
+    If they are not equal penalty kick was scored
+    """
     if computerChoice == userChoice:
         print("The goalkeeper has saved your attempt!")
     else:
@@ -10,8 +15,10 @@ def goalCheck(computerChoice, userChoice, score):
         
 
 
-
 def validate_user_choice(value):
+    """
+    Validated the user input so no wrong answers can be submitted
+    """
     try:
         if value not in ["left", "right", "middle"]:
             raise ValueError(
@@ -26,6 +33,9 @@ def validate_user_choice(value):
 
 
 def main():
+    """
+    Run all game functions
+    """
     score = 0
     options = ["left", "right", "middle"]
     computerChoice = random.choice(options)
