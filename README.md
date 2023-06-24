@@ -28,22 +28,28 @@ Penalty Shootout, first to 5 is a simple Python game where you compete against a
 ## Existing Features
 
 * ### User Input
+  * The user can input where they would like to shoot.
 
 ![Screenshot of the navigation bar.](readme-images/header.png)
 
 * ### Random goalkeeper save generation
+  * The computer randomly chooses in which direction to save.
 
 * ### Score System
+  * A user score system to track the user score.
+  * A goalkeeper score system to track the goalkeeper score.
 
 * ### Input validation and error-checking
-    * Any input except "left" "right" or "middle" is not allowed.
+  * The game only accepts specific input choices. The valid options are "left," "right," or "middle" representing the directions to shoot the penalty. Any other input will trigger an error message.
+  * The input validation is case-insensitive, meaning that both uppercase and lowercase variations of the valid choices are accepted. For example, "LEFT," "Left," and "left" will all be considered as valid inputs.
+  *  If the user provides an invalid input, an error message is displayed, informing them of the incorrect input and prompting them to try again.
+
 
 
 ## Future Features
 * ### Introduce Difficulty Levels:
    * Categorize questions into difficulty levels such as Easy, Medium, and Hard.
-   * 
-
+   
 # Testing
 
 
@@ -107,47 +113,31 @@ I've confirmed that the site is responsive and looks good on different screen si
 * Score is not updating until the next button is clicked.
 
 #### Solved Bugs
-* The site was experiencing horizontal scrolling. I fixed it by using the following code to the body: max-width: 100%;
-* The score was adding more than 1 if I pressed the correct answer multiple times. I fixed this by adding the highlighted code:
-
-![Bugfix1](readme-images/bug1.png) ![Bugfix2](readme-images/bug2.png) 
+* I could choose the same option every time and always score this happened because computerChoice = random.choice(options) was happening outside of the while loop so it would never randomize a new choice.
+Once I added it to the while loop it was randomizing a new choice every time.
 
 
 ## Validation Testing
-* HTML
-  * No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
-* CSS
-  * No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
-* JavaScript
-  * No errors were found when passing through the official [(JSHint)](https://jshint.com)
-* Accessibility
+* PEP8
+  * No errors were returned from https://pep8ci.herokuapp.com
 
 ![Screenshot of the Lighthouse Pagespeed](readme-images/lighthouse.png)
 
 # Technologies Used
 
 ## Frameworks, Libraries & Progams Used
-  * Hover:css was used on the buttons to show a transition when hovered over.
-  * [Google Fonts](https://fonts.google.com) was used to import the 'Lilita One' font in the style.css file which is used on all text of the website.
-  * [Git](https://gitpod.io) was used for version control system to manage code changes, and the Gitpod terminal to commit those changes to Git and push them to GitHub.
+  * [Gitpod](https://gitpod.io) was used for version control system to manage code changes, and the Gitpod terminal to commit those changes to Git and push them to GitHub.
   * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
-  * [compressor.io](https://compressor.io) was used to compress the background image.
-  * [ChatGPT](https://chat.openai.com) was used to improve copyright.
+  * [ChatGPT](https://chat.openai.com) was used to improve copyright in the readme.
  ## Languages Used
- * HTML5
- * CSS3
- * JavaScript
+ * Python
 
 # Deployment
-* The site was deployed to GitHub pages. The steps to deploy are as follows:
-  * In the GitHub repository, navigate to the Settings tab
-  * From the source section drop-down menu, select the Master Branch
-  * Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-The live link can be found here - [Premier League Quiz](https://samuelkerstell.github.io/project-portfolio-2/)
+* The site was deployed to Heroku. The steps to deploy are as follows:
+  * Fork or clone this respository
+  * Create a new app on Heroku
+  * Set the build backs to Python and NodeJS in that order
+The live link can be found here - [Penalty shootout game](https://penalty-shootout-first-to-5-21972da03e60.herokuapp.com)
 
 # Credits
-## Code Used
- * Some of the JavaScript functions was inspired from this Youtube video from the user [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k) because I wasn't 100% confident on how to go about this Quiz.
-
-## Media
-* The background image was taken from [Unsplash](https://unsplash.com/photos/ObhCU6Vhoe8)
+  * Code Institute for the deployment terminal
