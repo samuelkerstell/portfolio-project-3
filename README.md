@@ -3,13 +3,13 @@
 ## Welcome!
 [View the live project here](https://penalty-shootout-first-to-5-21972da03e60.herokuapp.com)
 
-Penalty Shootout, first to 5 is a simple Python game where you compete against a computer goalkeeper in a penalty shootout. The objective of the game is to score more goals than the goalkeeper. The game follows a "first to 5" format, where the first player to score 5 goals wins the game.
+Penalty Shootout, first to 5 is a simple Python game where you compete against a computer goalkeeper in a penalty shootout. The objective of the game is to score more goals than the goalkeeper saves. The game follows a "first to 5" format, where the first player to reach 5 points wins the game.
 
 ![Different screen sizes](docs/images/amiresponsive.png)
 
 # How to play
-  1. The objective is to score more goals than the computer-controlled goalkeeper.
-  2. The game follows a "first to 5" format, meaning the first player to score 5 goals wins.
+  1. The objective is to score more goals than the computer-controlled goalkeeper saves.
+  2. The game follows a "first to 5" format, meaning the first player to reach 5 points wins.
   3. You will be prompted to choose where you want to shoot your penalty: left, right, or middle.
   4. Enter your choice by typing it in the provided input field.
   5. If your input is not one of the valid options (left, right, or middle), you will receive an error message and can try again.
@@ -30,7 +30,7 @@ Penalty Shootout, first to 5 is a simple Python game where you compete against a
 * ### User Input
   * The user can input where they would like to shoot.
 
-![Screenshot of the navigation bar.](readme-images/header.png)
+![Screenshot of the input field.](docs/images/input.png)
 
 * ### Random goalkeeper save generation
   * The computer randomly chooses in which direction to save.
@@ -39,74 +39,46 @@ Penalty Shootout, first to 5 is a simple Python game where you compete against a
   * A user score system to track the user score.
   * A goalkeeper score system to track the goalkeeper score.
 
+![Screenshot of the score system.](docs/images/score-system.png)
+
 * ### Input validation and error-checking
   * The game only accepts specific input choices. The valid options are "left," "right," or "middle" representing the directions to shoot the penalty. Any other input will trigger an error message.
   * The input validation is case-insensitive, meaning that both uppercase and lowercase variations of the valid choices are accepted. For example, "LEFT," "Left," and "left" will all be considered as valid inputs.
   *  If the user provides an invalid input, an error message is displayed, informing them of the incorrect input and prompting them to try again.
 
+![Screenshot of the validation and error-checking.](docs/images/validation.png)
+
 
 
 ## Future Features
 * ### Introduce Difficulty Levels:
-   * Categorize questions into difficulty levels such as Easy, Medium, and Hard.
+   * Categorize the game into difficulty levels such as Easy, Medium, and Hard.
    
 # Testing
 
-
-## Testing User Stories
-
-| `Goals` | `How Are They Achieved?` |
-| ----- | ---------------------- |
-| `First time visitors` | |
-| Understand what the website is and how to play the quiz. | The How to play container gives the user a good understanding of what the site is about. |
-| Expand their knowledge of the Premier League.  | By playing the quiz and learning from their mistakes. |
-| Convert into returning visitors.       | By providing an engaging and valuable experience. |
-| `Returning Visitors`   |
-| To come back and play more quiz. | Provide frequent updates to the quiz content, including new questions, topics, or themed quizzes. |
-| `Admin User`           |
-| Updating the quiz and difficulty.| Adding more quizzes and introducing different difficulty levels. |
-
 ## Full Testing
-Full testing was performed on the following devices:
-* PC:
-  * Desktop PC
-* Laptop:
-  * Macbook Air 2021 13.6-inch screen
-* Mobile Devices:
-  * iPhone 13
+Full testing was performed on the following terminals:
+  * My local gitpod terminal
+  * Heroku terminal
 
-Desktop PC tested the site using the following browsers:
-* Google Chrome
-* Opera
-* Firefox
-
-The Apple devices tested the site using the following browsers:
-* Safari
-* Google Chrome
-
-
-I've confirmed that the site is responsive and looks good on different screen sizes.
 
 | `Feature` | `Expected Outcome` | `Testing Performance` | `Result` | `Pass/Fail`|
 | ----------|--------------------|-----------------------|----------|------------|
-| `Header`  | |
-| Logo               | When clicked the user will be redirected to the Home Page  | Clicked Logo  |  Redirected to the Home Page  | Pass |
+| `Input`  | |
+| Input       | When inputting a input user is expected to get a respone  | Added a valid input  |  Got a response  | Pass |
 |  | | | | |
-| `Quiz Container` |  |
-| Start Button  | When clicked user will be able to view the first question.  | Clicked on Start button   | First question shows up  | Pass |
-| Correct Answer | When clicked user will get instant feedback making the button green     | Clicked on Correct Answer  | Button turns green     | Pass |
-| Wrong Answer  | When clicked user will get instant feedback making the button red  | Clicked on Wrong Answer   | Button turns red      | Pass |
-| Next Button  | When clicked next question & answers will show up  | Clicked on Next Button   | Next question & answers shows up      | Pass |
-| Submit Button  | When clicked your final score will show up  | Clicked on Submit Button   | The final score shows up      | Pass |
+| `Goal Check` |  |
+| Goal  | When inputting an input that's not the same as the goalkeepers the user is expected to score  | Choose an input that's not the same as the keepers   | Goal is scored  | Pass |
+| Goalkeeper save | When inputting an input that's the same as the goalkeepers the goalkeeper is expected to save  | Choose an input that's the same as the keepers  | The goalkeeper saved the shot     | Pass |
 | | | | | |
 | `Score System` |
-| Correct answer | When correct answer is choosen score goes up 1 point | Choosed correct answer | Score goes up 1 point  | Pass |
-| Wrong answer | When wrong answer is choosen score stays the same | Choosed wrong answer | Score stays the same  | Pass |
+| User score | When the user scored the user expects the score to go up by 1 point | User scored | Score goes up by 1 point  | Pass |
+| Goalkeeper saves | When the goalkeeper saves the user expects the keepers score to go up by 1 point | Goalkeeper saves | Goalkeeper score goes up by 1  | Pass |
 | | | | | |
-| `Result Container` |
-| Restart Button |When clicked quiz will restart | Clicked Restart Button | Quiz is restarted  | Pass |
+| `User input validation` |
+| Invalid input |When an invalid input was added user is expected to be notified | Invalid input added | User gets a error message and with a option to try again  | Pass |
+| Valid input |When a valid input was added user is expected to know if they scored or not | Valid input added | User gets feedback if they scored or not  | Pass |
 | | | | | |
-
 
 
 ### Bugs
@@ -121,14 +93,14 @@ Once I added it to the while loop it was randomizing a new choice every time.
 * PEP8
   * No errors were returned from https://pep8ci.herokuapp.com
 
-![Screenshot of the Lighthouse Pagespeed](readme-images/lighthouse.png)
 
 # Technologies Used
 
 ## Frameworks, Libraries & Progams Used
-  * [Gitpod](https://gitpod.io) was used for version control system to manage code changes, and the Gitpod terminal to commit those changes to Git and push them to GitHub.
+  * [Gitpod](https://gitpod.io) was used to write the code and push to github.
   * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
   * [ChatGPT](https://chat.openai.com) was used to improve copyright in the readme.
+  * [Heroku](https://heroku.com) was used to deploy the project.
  ## Languages Used
  * Python
 
