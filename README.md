@@ -129,7 +129,7 @@ Once I added it to the while loop it was randomizing a new choice every time.
     * Set the build backs to Python and NodeJS in that order
   The live link can be found here - [Penalty shootout game](https://penalty-shootout-first-to-5-21972da03e60.herokuapp.com)
 
-  * To deploy the project on my local computer is used Gitpod. The steps to deploy are as follows:
+  * To deploy the project on my local computer I used Gitpod. The steps to deploy are as follows:
     * Type "python3 run.py" in the terminal.
 
 # Credits
