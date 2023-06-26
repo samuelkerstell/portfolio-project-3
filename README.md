@@ -27,8 +27,11 @@ Penalty Shootout, first to 5 is a simple Python game where you compete against a
 
 ## Existing Features
 
-* ### User Input
-  * The user can input where they would like to shoot.
+* ### Username Input
+  * Allows the user to enter a username.
+
+* ### Answer Input
+  * Allows the user to choose in which direction they would like to shoot.
 
 ![Screenshot of the input field.](docs/images/input.png)
 
