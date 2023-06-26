@@ -23,40 +23,54 @@ Penalty Shootout, first to 5 is a simple Python game where you compete against a
   13. The final result will be displayed, indicating whether you won or lost.
   14. Enjoy the game and strive to become the penalty shootout champion by outscoring the goalkeeper!
 
+
 # Features
 
 ## Existing Features
 
-* ### Username Input
-  * Allows the user to enter a username.
+  * ### Username Input
+    * Allows the user to enter a username.
 
-* ### Answer Input
-  * Allows the user to choose in which direction they would like to shoot.
+  ![Screenshot of the username input field.](docs/images/nameinput.PNG)
 
-![Screenshot of the input field.](docs/images/input.png)
+  * ### Answer Input
+    * Allows the user to choose in which direction they would like to shoot.
 
-* ### Random goalkeeper save generation
-  * The computer randomly chooses in which direction to save.
+  ![Screenshot of the input field.](docs/images/input.png)
 
-* ### Score System
-  * A user score system to track the user score.
-  * A goalkeeper score system to track the goalkeeper score.
+  * ### Random goalkeeper save generation
+    * The computer randomly chooses in which direction to save.
 
-![Screenshot of the score system.](docs/images/score-system.png)
+  * ### Score System
+    * A user score system to track the user score.
+    * A goalkeeper score system to track the goalkeeper score.
 
-* ### Input validation and error-checking
-  * The game only accepts specific input choices. The valid options are "left," "right," or "middle" representing the directions to shoot the penalty. Any other input will trigger an error message.
-  * The input validation is case-insensitive, meaning that both uppercase and lowercase variations of the valid choices are accepted. For example, "LEFT," "Left," and "left" will all be considered as valid inputs.
-  *  If the user provides an invalid input, an error message is displayed, informing them of the incorrect input and prompting them to try again.
+  ![Screenshot of the score system.](docs/images/score-system.png)
 
-![Screenshot of the validation and error-checking.](docs/images/validation.png)
+  * ### Input validation and error-checking
+    * The game only accepts specific input choices. The valid options are "left," "right," or "middle" representing the directions to shoot the penalty. Any other input will trigger an error message.
+    * The input validation is case-insensitive, meaning that both uppercase and lowercase variations of the valid choices are accepted. For example, "LEFT," "Left," and "left" will all be considered as valid inputs.
+    *  If the user provides an invalid input, an error message is displayed, informing them of the incorrect input and prompting them to try again.
+
+  ![Screenshot of the validation and error-checking.](docs/images/validation.png)
 
 
 
 ## Future Features
 * ### Introduce Difficulty Levels:
    * Categorize the game into difficulty levels such as Easy, Medium, and Hard.
-   
+
+# User Stories
+  1. As a player, I want to be able to enter my name, so that I can personalize my gameplay experience.
+  2. As a player, I want to choose where to shoot my penalty (left, right, or middle), so that I can try to score a goal.
+  3. As a player, I want to know if my penalty was saved by the goalkeeper or if I scored a goal, so that I can track my progress
+  4. As a player, I want to see the current score of both myself and the goalkeeper, so that I can know who is winning the game.
+  5. As a player, I want to play a penalty shootout game where the first player to score 5 goals wins, so that I can have an objective and a clear end to the game.
+  6. As a player, I want the game to provide clear instructions and valid options for shooting penalties, so that I can understand the rules and make informed choices.
+  7. As a player, I want the game to handle invalid input and prompt me to enter a valid choice, so that I cannot make incorrect moves.
+  8. As a player, I want to receive a congratulatory message if I win the game by scoring 5 goals first, so that I can feel a sense of accomplishment.
+  9. As a player, I want to receive a message if the goalkeeper wins the game by saving 5 penalties first, so that I know when the game is over.
+
 # Testing
 
 ## Full Testing
@@ -85,10 +99,10 @@ Full testing was performed on the following terminals:
 
 
 ### Bugs
-* Score is not updating until the next button is clicked.
+* No current bugs.
 
 #### Solved Bugs
-* I could choose the same option every time and always score this happened because computerChoice = random.choice(options) was happening outside of the while loop so it would never randomize a new choice.
+* I could choose the same option every time and always score this happened because computer_choice = random.choice(options) was happening outside of the while loop so it would never randomize a new choice.
 Once I added it to the while loop it was randomizing a new choice every time.
 
 
@@ -104,15 +118,19 @@ Once I added it to the while loop it was randomizing a new choice every time.
   * [GitHub](https://github.com) was used to store the project code after being pushed from gitpod.
   * [ChatGPT](https://chat.openai.com) was used to improve copyright in the readme.
   * [Heroku](https://heroku.com) was used to deploy the project.
+  * [random] library was used to randomize the computer choice.
  ## Languages Used
  * Python
 
 # Deployment
-* The site was deployed to Heroku. The steps to deploy are as follows:
-  * Fork or clone this respository
-  * Create a new app on Heroku
-  * Set the build backs to Python and NodeJS in that order
-The live link can be found here - [Penalty shootout game](https://penalty-shootout-first-to-5-21972da03e60.herokuapp.com)
+  * The site was deployed to Heroku. The steps to deploy are as follows:
+    * Fork or clone this respository
+    * Create a new app on Heroku
+    * Set the build backs to Python and NodeJS in that order
+  The live link can be found here - [Penalty shootout game](https://penalty-shootout-first-to-5-21972da03e60.herokuapp.com)
+
+  * To deploy the project on my local computer is used Gitpod. The steps to deploy are as follows:
+    * Type "python3 run.py" in the terminal.
 
 # Credits
   * Code Institute for the deployment terminal

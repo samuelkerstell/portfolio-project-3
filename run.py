@@ -1,9 +1,10 @@
 import random
+
+
 class Player():
     def __init__(self, name=None):
         self.name = name
         self.score = 0
-
 
     def validate_username(self):
         """
@@ -13,14 +14,13 @@ class Player():
             None
         """
         while True:
-            name = input("Enter your name: ").strip()  # Strip leading/trailing spaces
+            name = input("Enter your name: ").strip()
 
             if not name:
                 print("Username cannot be empty. Please try again.\n")
             else:
                 self.name = name
                 break
-
 
     def validate_user_choice(self, value):
         """
@@ -58,7 +58,8 @@ def goal_check(computer_choice, user_choice, user, gk_score):
         gk_score (int): The goalkeeper's score.
 
     Returns:
-        Tuple[int, int]: A tuple containing the updated user score and goalkeeper score.
+        Tuple[int, int]: A tuple containing the updated
+        user score and goalkeeper score.
     """
     if computer_choice == user_choice:
         gk_score += 1
@@ -75,6 +76,7 @@ def goal_check(computer_choice, user_choice, user, gk_score):
     print("")
     print("--------------------------------------------------------------")
     return user.score, gk_score
+
 
 def game(user, gk_score):
     """
@@ -100,13 +102,15 @@ def game(user, gk_score):
                 break
 
         computer_choice = random.choice(options)
-        user.score, gk_score = goal_check(computer_choice, user_choice, user, gk_score)
+        user.score, gk_score = goal_check(
+            computer_choice, user_choice, user, gk_score)
         print()
 
     if user.score == 5:
         print(f"Congrats, {user.name}! You won with a score of {user.score}")
     else:
         print(f"Game Over! The goalkeeper won with a score of {gk_score}")
+
 
 def main():
     """
@@ -116,9 +120,10 @@ def main():
     print("Welcome to the penalty shootout, first to 5.")
     print("--------------------------------------------------------------")
     gk_score = 0
-    user = Player()  
+    user = Player()
     user.validate_username()
     game(user, gk_score)
+
 
 if __name__ == '__main__':
     main()
